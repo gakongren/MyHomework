@@ -6,11 +6,6 @@ package cn.sorato.homework2;
 public class CaseCast{
     Case casecast;
 
-    public enum Case{
-        TO_UPPER,
-        TO_LOWER;
-    }
-
     public CaseCast(Case casecast){
         this.casecast = casecast;
     }
@@ -44,5 +39,10 @@ public class CaseCast{
             }
         }
         return sb.toString();
+    }
+
+    public enum Case{
+        TO_UPPER,
+        TO_LOWER
     }
 }
