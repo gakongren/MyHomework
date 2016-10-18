@@ -13,6 +13,9 @@ import java.util.stream.Stream;
 public class Exp1{
     static MathContext mc = new MathContext(128, RoundingMode.HALF_UP);
 
+    /**
+     * 第一次实验
+     */
     public static void test(){
         Stream<BigInteger> fibonacci = Stream.generate(new FSupplier());
         Stream<BigDecimal> goldenDivision = Stream.generate(new Supplier<BigDecimal>(){
