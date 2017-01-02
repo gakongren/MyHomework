@@ -4,12 +4,12 @@ package cn.sorato.exp2;
  * Created by kongren on 2016/10/10.
  */
 public class Time{
-    private long h, m, s;
+    private int h = 0, m = 0, s = 0;
 
-    public Time(long hour, long minute, long second){
-        h = hour;
-        m = minute;
-        s = second;
+    public Time(int hour, int minute, int second){
+        addHour(hour);
+        addMinute(minute);
+        addSecond(second);
     }
 
     public String display(){
@@ -18,10 +18,18 @@ public class Time{
 
     public void addSecond(int s){
         this.s += s;
+        if(this.s >= 60){
+            this.s -= 60;
+            addMinute(1);
+        }
     }
 
     public void addMinute(int m){
         this.m += m;
+        if(this.m >= 60){
+            this.m -= 60;
+            addHour(1);
+        }
     }
 
     public void addHour(int h){

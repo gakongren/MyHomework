@@ -8,23 +8,27 @@ import java.util.Scanner;
  */
 public class GuessGame{
     private int value;
+    public int max, min;
 
     public GuessGame(){
-        this(256);
+        this(0, 256);
     }
 
-    public GuessGame(int bound){
-        value = new Random().nextInt(bound);
-        System.out.println("猜数范围:0至" + bound);
+    public GuessGame(int leftBound, int rightBound){
+        value = leftBound + new Random().nextInt(rightBound - leftBound);
+        max = Math.max(leftBound, rightBound);
+        min = Math.min(leftBound, rightBound);
+        System.out.println("猜数范围:" + leftBound + "至" + rightBound);
     }
 
     public boolean guess(int i){
-        if(i == value)
+        if(i == value){
+            System.out.println(i + ":正确");
             return true;
-        else if(i > value)
-            System.out.println("大了");
+        }else if(i > value)
+            System.out.println(i + ":大了");
         else
-            System.out.println("小了");
+            System.out.println(i + ":小了");
         return false;
     }
 
@@ -34,7 +38,6 @@ public class GuessGame{
         do{
             b = guess(sc.nextInt());
         }while(!b);
-        System.out.println("踩中,结束");
         sc.close();
     }
 }

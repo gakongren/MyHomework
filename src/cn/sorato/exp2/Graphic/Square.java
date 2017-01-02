@@ -8,10 +8,6 @@ public class Square extends Graphic{
         super(h, w, b);
     }
 
-    public Square(){
-        super();
-    }
-
     @Override
     public void showOnConsole(){
         System.out.println((isFilled ? "实心" : "空心") + "长方形 长:" + width + " 高:" + height);

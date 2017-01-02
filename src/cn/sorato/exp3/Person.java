@@ -9,12 +9,11 @@ public class Person{
         male, female
     }
 
-    Person(){
-    }
+    Person(){}
 
-    public Person(String name, int age, Gender sex){
+    public Person(String name, int age, Gender gender){
         this();
-        setData(name, age, sex);
+        setData(name, age, gender);
     }
 
     public String toString(){

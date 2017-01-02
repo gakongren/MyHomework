@@ -1,14 +1,14 @@
 package cn.sorato;
 
-import cn.sorato.exp3.Exp3;
-
 /**
  * Created by kongren on 2016/9/23.
  */
 public class Main{
     public static void main(String[] args){
+        //s.stop();
+        //Exp4.test();
 
-        Exp3.test();
+        //Exp3.test();
 
         //Exp2.test();
 
